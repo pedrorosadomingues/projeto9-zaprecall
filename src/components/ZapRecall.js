@@ -2,13 +2,15 @@ import FlashCardContainer from './FlashCardContainer';
 import Footer from './Footer';
 import styled from 'styled-components';
 
-export default function ZapRecall({ children , cards , setCards }) {
+export default function ZapRecall({ children , cards , setCards , colors , setColors }) {
     return (
         <ScreenContainer>
             {children}
             <FlashCardContainer 
             cards={cards}
             setCards={setCards}
+            colors={colors}
+            setColors={setColors}
             />
             <Footer>
                 <span>/4 Concluidos</span>

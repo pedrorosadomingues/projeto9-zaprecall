@@ -3,15 +3,19 @@ import logo from './assets/logo.svg';
 import styled from 'styled-components';
 import { useState } from 'react';
 import CARDS from './utilities/cards';
+import COLORS from './utilities/colors';
 
 export default function App() {
   const [cards, setCards] = useState(CARDS);
+  const [colors, setColors] = useState(COLORS);
   
   return (
     <div>
       <ZapRecall
         cards={cards}
         setCards={setCards}
+        colors={colors}
+        setColors={setColors}
       >
         <LogoContainer>
           <img src={logo} alt="logo" />

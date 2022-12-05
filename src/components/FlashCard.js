@@ -1,23 +1,24 @@
 import styled from "styled-components";
 
+let yellow 
 
-export default function FlashCard({ text, text2, cards, setCards, card }) {
+export default function FlashCard({ text, text2, cards, setCards, card , setColors , yellow2 }) {
     function openQuestion() {
-        const backgroundColorLevelOne = ``
-        if (card.level === 1) backgroundColorLevelOne = `#FFFFD5`
         const newCards = [...cards];
+       
+        
         if (card.level > 2) return
         newCards.forEach(element => {
             if (element.id === card.id) {
-                card.level += 1
+                card.level += 1; 
             }
         })
         setCards(newCards)
     }
 
     return (
-        <FlashCardContainer color={backgroundColorLevelOne}>
-            <button>
+        <FlashCardContainer>
+            <button  color={yellow}>
                 <p>{card.level === 0 && text}</p>
                 <p>{card.level === 1 && text2}</p>
                 <p>{card.level === 2 && card.answer}</p>
@@ -33,7 +34,7 @@ const FlashCardContainer = styled.div`
    button {
         width: 300px;
         height: 65px;
-        background-color: #FFFFFF;
+        background-color: ${props => props.color};
         margin: 12px;
         padding: 15px;
         box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -52,7 +53,7 @@ const FlashCardContainer = styled.div`
         ion-icon {
             font-size: 30px;
         }            
-        &:hover {
+        ion-icon:hover {
             cursor: pointer;
         }
     }

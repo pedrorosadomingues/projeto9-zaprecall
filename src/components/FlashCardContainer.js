@@ -1,6 +1,6 @@
 import FlashCard from "./FlashCard";
 
-export default function FlashCardContainer({ cards , setCards }) {
+export default function FlashCardContainer({ cards , setCards , colors , setColors }) {
    console.log(cards[0])
     return (
         <div>
@@ -12,7 +12,9 @@ export default function FlashCardContainer({ cards , setCards }) {
             card={c}
             cards={cards}
             setCards={setCards}
-            ></FlashCard>)
+            yellow2={colors.yellow2}
+            setColors={setColors}
+            />)
             }
         </div>
     );

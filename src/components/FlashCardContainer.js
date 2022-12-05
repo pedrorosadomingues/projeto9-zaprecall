@@ -4,7 +4,8 @@ export default function FlashCardContainer({ cards , setCards , colors , setColo
    console.log(cards[0])
     return (
         <div>
-            {cards.map((c, index) => <FlashCard 
+            {cards.map((c, index) => <FlashCard
+            data-test="flashcard" 
             key={index} 
             text={c.text} 
             text2={c.question}

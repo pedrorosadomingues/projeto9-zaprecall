@@ -19,11 +19,11 @@ export default function FlashCard({ text, text2, cards, setCards, card , setColo
     return (
         <FlashCardContainer>
             <button  color={yellow}>
-                <p>{card.level === 0 && text}</p>
-                <p>{card.level === 1 && text2}</p>
-                <p>{card.level === 2 && card.answer}</p>
-                <p>{card.level === 3 && text}</p>
-                <ion-icon onClick={() => openQuestion()} name="play-outline"></ion-icon>
+                <p data-test="flashcard-text" >{card.level === 0 && text}</p>
+                <p data-test="flashcard-text">{card.level === 1 && text2}</p>
+                <p data-test="flashcard-text">{card.level === 2 && card.answer}</p>
+                <p data-test="flashcard-text">{card.level === 3 && text}</p>
+                <ion-icon data-test="play-btn" onClick={() => openQuestion()} name="play-outline"></ion-icon>
             </button>
 
         </FlashCardContainer>

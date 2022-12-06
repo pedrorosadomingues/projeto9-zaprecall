@@ -13,7 +13,7 @@ export default function FlashCardContainer({ cards , setCards , colors , setColo
             card={c}
             cards={cards}
             setCards={setCards}
-            yellow2={colors.yellow2}
+            colors={colors}
             setColors={setColors}
             />)
             }

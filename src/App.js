@@ -7,15 +7,14 @@ import COLORS from './utilities/colors';
 
 export default function App() {
   const [cards, setCards] = useState(CARDS);
-  const [colors, setColors] = useState(COLORS);
+  
   
   return (
     <div>
       <ZapRecall
         cards={cards}
         setCards={setCards}
-        colors={colors}
-        setColors={setColors}
+        colors={COLORS}
       >
         <LogoContainer>
           <img src={logo} alt="logo" />
